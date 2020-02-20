@@ -354,7 +354,7 @@ extend(Converter.prototype, {
       ? (utmups.easting < 2000000 ? 'Y' : 'Z')
       : (utmups.northing < 2000000 ? 'A' : 'B')
     const calculatedZone = isUTM ? utmups.zoneNumber : upsZoneLetter
-    return `${calculatedZone} ${Math.round(utmups.easting)}mE ${Math.round(utmups.northing)}mN`
+    return `${calculatedZone}${upsZoneLetter} ${Math.round(utmups.easting)}mE ${Math.round(utmups.northing)}mN`
   },
 
   serializeUTM(utm) {
